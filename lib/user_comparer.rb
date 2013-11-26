@@ -29,7 +29,17 @@ module UserComparer
   	end
 
   	def compare
+  		# returns user with more followers, or both if even
+  		if @user1.followers > @user2.followers 
+  			return "#{@user1.username} has more followers!"
+  		elsif @user1.followers < @user2.followers
+  			return "#{@user2.username} has more followers!"
+  		else
+  			return "#{@user1.username} and #{@user2.username} have the same number of followers!  Who knew!?"
+  		end
   	end
 
   end
 end
+
+
